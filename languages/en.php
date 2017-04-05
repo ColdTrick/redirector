@@ -1,0 +1,5 @@
+<?php
+
+return [
+	'redirector' => "Redirector",
+];
