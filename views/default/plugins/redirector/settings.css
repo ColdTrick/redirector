@@ -1,0 +1,17 @@
+#redirector-redirects-list li:first-child {
+	display: none;
+}
+
+#redirector-redirects-list li:last-child {
+	display: inline-block;
+}
+
+#redirector-redirects-list .elgg-icon-delete {
+	margin-left: 10px;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+#redirector-redirects-list li:hover .elgg-icon-delete {
+	visibility: visible;
+}
