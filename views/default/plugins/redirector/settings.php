@@ -47,6 +47,12 @@ $body .= '</div>';
 
 echo elgg_view_module('info', elgg_echo('redirector:settings:redirects:add:title'), $body);
 
+echo elgg_view_field([
+	'#type' => 'hidden',
+	'name' => 'params[redirects]',
+	'value' => '',
+]);
+
 $list_items = elgg_format_element('li', [], elgg_echo('notfound'));
 if ($redirects) {
 	$redirects = json_decode($redirects, true);
