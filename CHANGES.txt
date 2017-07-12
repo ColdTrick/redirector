@@ -1,6 +1,11 @@
 Version history
 ===============
 
+1.1 (2017-07-12):
+
+- changed: forwarding now checks on the 404 page
+- fixed: unable to remove last redirect setting
+
 1.0 (2017-05-11):
 
 - added: base plugin structure
