@@ -3,7 +3,7 @@
 	"description": "Redirect URLs on your Elgg site",
 	"type": "elgg-plugin",
 	"keywords": ["elgg", "plugin", "urls", "redirect"],
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-only",
 	"support": {
 		"source": "https://github.com/ColdTrick/redirector",
 		"issues": "https://github.com/ColdTrick/redirector/issues"
