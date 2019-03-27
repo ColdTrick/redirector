@@ -1,6 +1,11 @@
 Version history
 ===============
 
+1.2 (2019-03-27):
+
+- added: dutch translation
+- fixed: correct license format
+
 1.1 (2017-07-12):
 
 - changed: forwarding now checks on the 404 page
