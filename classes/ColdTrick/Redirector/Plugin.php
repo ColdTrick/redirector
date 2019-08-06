@@ -7,28 +7,24 @@ class Plugin {
 	/**
 	 * Modifies the value of the redirects setting
 	 *
-	 * @param string $hook        hook name
-	 * @param string $entity_type hook type
-	 * @param array  $returnvalue current return value
-	 * @param array  $params      parameters
+	 * @param \Elgg\Hook $hook 'setting', 'plugin'
 	 *
 	 * @return void|string
 	 */
-	public static function saveRedirectsSetting($hook, $entity_type, $returnvalue, $params) {
+	public static function saveRedirectsSetting(\Elgg\Hook $hook) {
 		
-		$plugin = elgg_extract('plugin', $params);
+		$plugin = $hook->getParam('plugin');
 		if (!($plugin instanceof \ElggPlugin) || ($plugin->getID() !== 'redirector')) {
 			return;
 		}
 		
-		$setting = elgg_extract('name', $params);
-		if ($setting !== 'redirects') {
+		if ($hook->getParam('name') !== 'redirects') {
 			return;
 		}
 		
 		$result = [];
 		
-		$value = elgg_extract('value', $params);
+		$value = $hook->getParam('value');
 		foreach ($value as $from => $to) {
 			
 			$from = str_ireplace(elgg_get_site_url(), '', $from);

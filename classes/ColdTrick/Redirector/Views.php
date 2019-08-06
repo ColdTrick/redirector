@@ -7,16 +7,13 @@ class Views {
 	/**
 	 * Check the 404 resource if we can redirect to different page
 	 *
-	 * @param string $hook        hook name
-	 * @param string $entity_type hook type
-	 * @param array  $returnvalue current return value
-	 * @param array  $params      parameters
+	 * @param \Elgg\Hook $hook 'view_vars', 'resources/error'
 	 *
 	 * @return void
 	 */
-	public static function viewVars404($hook, $entity_type, $returnvalue, $params) {
+	public static function viewVars404(\Elgg\Hook $hook) {
 		
-		$error_type = (int) elgg_extract('type', $returnvalue);
+		$error_type = (int) elgg_extract('type', $hook->getValue());
 		if ($error_type !== 404) {
 			return;
 		}
