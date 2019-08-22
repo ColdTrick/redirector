@@ -1,6 +1,10 @@
 Version history
 ===============
 
+1.2.1 (2019-08-22):
+
+- several small chores/fixes
+
 1.2 (2019-03-27):
 
 - added: dutch translation

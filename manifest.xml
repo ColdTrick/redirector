@@ -3,7 +3,7 @@
 	<name>Redirector</name>
 	<id>redirector</id>
 	<author>ColdTrick IT Solutions</author>
-	<version>1.2</version>
+	<version>1.2.1</version>
 	<description>Redirect URLs on your Elgg site</description>
 	<website>http://www.coldtrick.com/</website>
 	<repository>https://github.com/ColdTrick/redirector</repository>
