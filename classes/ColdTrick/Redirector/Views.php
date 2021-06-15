@@ -38,6 +38,7 @@ class Views {
 			return;
 		}
 		
-		forward($forward_url);
+		_elgg_services()->responseFactory->redirect($forward_url);
+		exit;
 	}
 }

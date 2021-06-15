@@ -1,5 +1,4 @@
-define(function(require) {
-	var $ = require('jquery');
+define(['jquery'], function($) {
 		
 	var add_redirect = function() {
 		$from = $('#redirect_from');
