@@ -28,7 +28,7 @@ class Views {
 			return;
 		}
 		
-		$url = str_ireplace(elgg_get_site_url(), '', current_page_url());
+		$url = str_ireplace(elgg_get_site_url(), '', elgg_get_current_url());
 		$url = parse_url($url, PHP_URL_PATH);
 		$url = rtrim($url, '/');
 		
