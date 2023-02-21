@@ -4,7 +4,7 @@ return [
 	'plugin' => [
 		'version' => '4.0',
 	],
-	'hooks' => [
+	'events' => [
 		'setting' => [
 			'plugin' => [
 				'\ColdTrick\Redirector\Plugin::saveRedirectsSetting' => [],

@@ -2,18 +2,21 @@
 
 namespace ColdTrick\Redirector;
 
+/**
+ * Views related events
+ */
 class Views {
 	
 	/**
 	 * Check the 404 resource if we can redirect to different page
 	 *
-	 * @param \Elgg\Hook $hook 'view_vars', 'resources/error'
+	 * @param \Elgg\Event $event 'view_vars', 'resources/error'
 	 *
 	 * @return void
 	 */
-	public static function viewVars404(\Elgg\Hook $hook) {
+	public static function viewVars404(\Elgg\Event $event) {
 		
-		$error_type = (int) elgg_extract('type', $hook->getValue());
+		$error_type = (int) elgg_extract('type', $event->getValue());
 		if ($error_type !== 404) {
 			return;
 		}

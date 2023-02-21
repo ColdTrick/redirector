@@ -3,7 +3,9 @@ define(['jquery'], function($) {
 	var add_redirect = function() {
 		$from = $('#redirect_from');
 		$to = $('#redirect_to');
-
+		console.log($from);
+		console.log($to);
+		
 		if (!$from.val() || !$to.val()) {
 			return;
 		}
@@ -15,7 +17,8 @@ define(['jquery'], function($) {
 		
 		$list_item += '<span class="elgg-icon fa elgg-icon-delete fa-times"></span>';
 		
-		$list_item = '<li>' + $list_item + '</li>'; 
+		$list_item = '<li>' + $list_item + '</li>';
+		console.log($list_item);
 		
 		$('#redirector-redirects-list').append($list_item);
 		

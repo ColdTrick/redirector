@@ -1,3 +1,7 @@
+.redirector-settings-arrow {
+	line-height: 2.5rem;
+}
+
 #redirector-redirects-list {
 	.elgg-icon-delete {
 		margin-left: 10px;
