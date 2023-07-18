@@ -26,7 +26,7 @@ $body = elgg_view_field([
 		[
 			'#type' => 'button',
 			'class' => 'elgg-button-submit',
-			'value' => elgg_echo('add'),
+			'text' => elgg_echo('add'),
 			'id' => 'redirector-redirect-add',
 		],
 	],
