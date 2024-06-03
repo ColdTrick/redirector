@@ -1,6 +1,6 @@
 <?php
 
-elgg_require_js('plugins/redirector/settings');
+elgg_import_esm('plugins/redirector/settings');
 
 $redirects = elgg_get_plugin_setting('redirects', 'redirector');
 
