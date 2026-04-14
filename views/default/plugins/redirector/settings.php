@@ -1,6 +1,7 @@
 <?php
 
 elgg_import_esm('plugins/redirector/settings');
+elgg_require_css('plugins/redirector/settings');
 
 $redirects = elgg_get_plugin_setting('redirects', 'redirector');
 

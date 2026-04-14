@@ -3,24 +3,22 @@
 namespace ColdTrick\Redirector;
 
 /**
- * Views related events
+ * Route related events
  */
-class Views {
+class Route {
 	
 	/**
-	 * Check the 404 resource if we can redirect to different page
+	 * Check if we can redirect to different page
 	 *
-	 * @param \Elgg\Event $event 'view_vars', 'resources/error'
+	 * @param \Elgg\Event $event 'route:match', 'system'
 	 *
 	 * @return void
 	 */
-	public static function viewVars404(\Elgg\Event $event) {
-		
-		$error_type = (int) elgg_extract('type', $event->getValue());
-		if ($error_type !== 404) {
+	public static function redirect(\Elgg\Event $event) {
+		$url = trim($event->getParam('pathinfo'), '/ ');
+		if (empty($url)) {
 			return;
 		}
-		
 		$settings = elgg_get_plugin_setting('redirects', 'redirector');
 		if (!$settings) {
 			return;
@@ -30,10 +28,6 @@ class Views {
 		if (empty($redirects)) {
 			return;
 		}
-		
-		$url = str_ireplace(elgg_get_site_url(), '', elgg_get_current_url());
-		$url = (string) parse_url($url, PHP_URL_PATH);
-		$url = rtrim($url, '/');
 		
 		// check if url is configured to be forwarded
 		$forward_url = elgg_extract($url, $redirects);
