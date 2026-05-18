@@ -19,6 +19,7 @@ class Route {
 		if (empty($url)) {
 			return;
 		}
+		
 		$settings = elgg_get_plugin_setting('redirects', 'redirector');
 		if (!$settings) {
 			return;
